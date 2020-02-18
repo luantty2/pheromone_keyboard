@@ -4,6 +4,8 @@ A keyboard with midi potentiometer, rotary encoder and oled support.
 You can use the potentiometer with any software supports MIDI input, such as FL Studio, and the potentiometer controls volume by default. You can also use it in Lightroom after installing MIDI2LR plugin.
 
 ![Photo](https://i.imgur.com/lK41vY3.jpg)
+![Photo](https://i.imgur.com/lK41vY3.jpg)
+
 
 Keyboard Maintainer: [luantty2](https://github.com/luantty2)
 
