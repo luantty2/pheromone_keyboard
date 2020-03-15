@@ -3,7 +3,7 @@
 * [Overview](#overview)
 * [Keymap](#keymap)
 * [How to use](#how-to-use)
-    * [Using rotary encoder with lightroom](##using-rotary-encoder-with-lightroom)
+    * [Using rotary encoder with lightroom](#using-rotary-encoder-with-lightroom)
     * [Using slider with FL Studio](##using-slider-with-FL-Studio)
 * [Build setup](#build-setup)
     * [Hardware](##hardware)
