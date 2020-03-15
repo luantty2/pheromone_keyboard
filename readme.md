@@ -74,7 +74,8 @@ __It's important to right click on your command row, and select 'Binary offset' 
 
 I mentioned that the rotary encoder can handle up to 26 different sliders in lightroom, to do that, click any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
 
-![PHOTO](https://i.imgur.com/EVTehiw.png)
+<!-- ![PHOTO](https://i.imgur.com/EVTehiw.png) -->
+<img src="https://i.imgur.com/EVTehiw.png" width="500">
 
 ## Using slider with FL Studio
 
@@ -189,7 +190,9 @@ The slider feature is not enabled by default, to enable it, edit *config.h* and 
 
 You're able to detect the ouput value from using midi software, I'm using MIDI Monitor in this case.
 
-![PHOTO](https://i.imgur.com/sUAwIdn.png)
+<!-- ![PHOTO](https://i.imgur.com/sUAwIdn.png) -->
+<img src="https://i.imgur.com/sUAwIdn.png" width="500">
+
 
 
 **The feature is still being tested.**
