@@ -1,5 +1,5 @@
-#ifndef CRUSHER_H
-#define CRUSHER_H
+#ifndef PHEROMONE_H
+#define PHEROMONE_H
 
 #include "quantum.h"
 
