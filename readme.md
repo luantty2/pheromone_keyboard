@@ -117,11 +117,13 @@ The gerber files is ready to be manufactured, send it to any manufacturer you tr
 
 
 The slide potentiometer I'm using here is bought from [taobao](https://detail.tmall.com/item.htm?id=605360822904&spm=a1z09.2.0.0.62ba2e8dWNJi1c&_u=110cp31q45a9), in theory any other B10K slide potentiometer should also work fine, just remember to modify the footprint in KiCad if your slide potentiometer come with a different size.
-![Photo](https://i.imgur.com/kBHOk4f.jpg)
+<!-- ![Photo](https://i.imgur.com/kBHOk4f.jpg) -->
+<img src="https://i.imgur.com/kBHOk4f.jpg" width="300">
 
 The handle length of rotary encoder would better be 15mm, so that it's easier to find a suitable cap for it, otherwise it would be too high or to low.
 
-![Photo](https://i.imgur.com/AZAtBvj.jpg)
+<!-- ![Photo](https://i.imgur.com/AZAtBvj.jpg) -->
+<img src="https://i.imgur.com/AZAtBvj.jpg" width="300">
 
 *The handle length refer to as the 'L' length*
 
@@ -162,9 +164,11 @@ Once you've got qmk working, simply hold down esc when connecting keyboard to co
 
 ### Customizing oled screen
 
-![Photo](https://i.imgur.com/4qOjIy7.jpg)
+<!-- ![Photo](https://i.imgur.com/4qOjIy7.jpg) -->
+<img src="https://i.imgur.com/4qOjIy7.jpg" width="200">
 
-![Photo](https://i.imgur.com/G7eADfx.jpg)
+<!-- ![Photo](https://i.imgur.com/G7eADfx.jpg) -->
+<img src="https://i.imgur.com/G7eADfx.jpg" width="200">
 
 The oled screen always showing an image, in addition, it also shows you multiple useful information:
 * the capslock state
