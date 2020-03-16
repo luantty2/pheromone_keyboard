@@ -15,13 +15,12 @@ int16_t pot_val    = 0;
 int16_t pot_ccVal  = 0;
 #define POT_TOLERANCE 12
 
-// enum { TO_BASE_LAYER_BASE = 0, TO_BASE_LAYER_FUNC, TO_BASE_LAYER_LTRM, TO_BASE_LAYER_MIDI };
-// uint8_t last_stayed_layer = 0;
+enum { TO_BASE_LAYER_BASE = 0, TO_BASE_LAYER_FUNC, TO_BASE_LAYER_LTRM, /*TO_BASE_LAYER_MIDI*/ };
+uint8_t last_stayed_layer = 0;
 
 enum midi_cc_keycodes_LTRM { MIDI_CC1 = SAFE_RANGE, MIDI_CC2, MIDI_CC3, MIDI_CC4, MIDI_CC5, MIDI_CC6, MIDI_CC7, MIDI_CC8, MIDI_CC9, MIDI_CC10, MIDI_CC11, MIDI_CC12, MIDI_CC13, MIDI_CC14, MIDI_CC15, MIDI_CC16, MIDI_CC17, MIDI_CC18, MIDI_CC19, MIDI_CC20, MIDI_CC21, MIDI_CC22, MIDI_CC23, MIDI_CC24, MIDI_CC25, MIDI_CC26 };
 
 static char current_alpha_oled = '\0';
-
 static char current_ltrm_alpha_oled = '\0';
 
 static uint8_t current_MIDI_ccNumber         = 1;
@@ -34,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      //---
                      KC_CAPS, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT, KC_BSLS, KC_ENT,
                      //---
-                     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, /*TD(TO_BASE_LAYER_BASE),*/ TO(_FUNC),
+                     KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, TD(TO_BASE_LAYER_BASE),/*TO(_FUNC),*/
                      //---
                      KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_LEFT, KC_DOWN, KC_RGHT),
 
@@ -44,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      //-Tab_____q_________w________e________r________t________y________u________i_______o_________p_______{__________}
                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                      //-Caps____a_________s________d________f________g________h_______j________k_________l________;________'________\______Enter
-                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, /*TD(TO_BASE_LAYER_FUNC),*/ TO(_LTRM),
+                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, TD(TO_BASE_LAYER_FUNC),/* TO(_LTRM),*/
                      //-Shift___z_________x________c________v________b________n_______m________,_________.________/______Shift______Up_____________fn
                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, KC_MSTP, KC_MNXT),
     				 //-Ctrl____Alt_______Win____Space____Left______Down____Right
@@ -55,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      //-Tab_____q_________w__________e_________r_________t_________y_________u_________i_________o__________p_________{_______}
                      KC_TRNS, MIDI_CC11, MIDI_CC12, MIDI_CC13, MIDI_CC14, MIDI_CC15, MIDI_CC16, MIDI_CC17, MIDI_CC18, MIDI_CC19, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                      //-Caps______a__________s__________d__________f__________g__________h_________j__________k__________l__________;_______'_________\______Enter
-                     KC_TRNS, MIDI_CC20, MIDI_CC21, MIDI_CC22, MIDI_CC23, MIDI_CC24, MIDI_CC25, MIDI_CC26, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MI_Db_1, /*TD(TO_BASE_LAYER_LTRM),*/ TO(_BASE),
+                     KC_TRNS, MIDI_CC20, MIDI_CC21, MIDI_CC22, MIDI_CC23, MIDI_CC24, MIDI_CC25, MIDI_CC26, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MI_Db_1, TD(TO_BASE_LAYER_LTRM),/* TO(_BASE),*/
                      //-Shift_____z_________x___________c__________v__________b_________n___________m_________,________.________/_______Shift_____Up______________fn
                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MI_D_2, MI_Eb_2, MI_E_2),
     				 //-Ctrl____Alt_______Win____Space___Left_____Down_____Right
@@ -71,37 +70,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //                  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPRV, MI_VELD, KC_MNXT),
     // 					//-Ctrl____Alt_______Win____Space___Left_____Down_____Right
 };
-// void dance_layer_BASE(qk_tap_dance_state_t *state, void *user_data) {
-//     if (state->count == 1) {  // TAP ONCE
-//         layer_on(_FUNC);
-//     } else {  // TAP TWICE OR MORE
-//         layer_on(last_stayed_layer);
-//     }
-// }
 
-// void dance_layer_reset_BASE(qk_tap_dance_state_t *state, void *user_data) { layer_off(_BASE); }
+void dance_layer_BASE(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {  // TAP ONCE
+        layer_on(_FUNC);
+    } else {  // TAP TWICE OR MORE
+        layer_on(last_stayed_layer);
+    }
+}
 
-// void dance_layer_FUNC(qk_tap_dance_state_t *state, void *user_data) {
-//     if (state->count == 1) {  // TAP ONCE
-//         layer_on(_LTRM);
-//     } else {  // TAP TWICE OR MORE
-//         layer_on(_BASE);
-//         last_stayed_layer = _FUNC;
-//     }
-// }
+void dance_layer_reset_BASE(qk_tap_dance_state_t *state, void *user_data) { layer_off(_BASE); }
 
-// void dance_layer_reset_FUNC(qk_tap_dance_state_t *state, void *user_data) { layer_off(_FUNC); }
+void dance_layer_FUNC(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {  // TAP ONCE
+        layer_on(_LTRM);
+    } else {  // TAP TWICE OR MORE
+        layer_on(_BASE);
+        last_stayed_layer = _FUNC;
+    }
+}
 
-// void dance_layer_LTRM(qk_tap_dance_state_t *state, void *user_data) {
-//     if (state->count == 1) {  // TAP ONCE
-//         layer_on(_MIDI);
-//     } else {  // TAP TWICE OR MORE
-//         layer_on(_BASE);
-//         last_stayed_layer = _LTRM;
-//     }
-// }
+void dance_layer_reset_FUNC(qk_tap_dance_state_t *state, void *user_data) { layer_off(_FUNC); }
 
-// void dance_layer_reset_LTRM(qk_tap_dance_state_t *state, void *user_data) { layer_off(_LTRM); }
+void dance_layer_LTRM(qk_tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {  // TAP ONCE
+        layer_on(_BASE);
+    } else {  // TAP TWICE OR MORE
+        layer_on(_BASE);
+        last_stayed_layer = _LTRM;
+    }
+}
+
+void dance_layer_reset_LTRM(qk_tap_dance_state_t *state, void *user_data) { layer_off(_LTRM); }
 
 // void dance_layer_MIDI(qk_tap_dance_state_t *state, void *user_data) {
 //     if (state->count == 1) {  // TAP ONCE
@@ -114,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // void dance_layer_reset_MIDI(qk_tap_dance_state_t *state, void *user_data) { layer_off(_MIDI); }
 
-// qk_tap_dance_action_t tap_dance_actions[] = {[TO_BASE_LAYER_BASE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_BASE, dance_layer_reset_BASE), [TO_BASE_LAYER_FUNC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_FUNC, dance_layer_reset_FUNC), [TO_BASE_LAYER_LTRM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_LTRM, dance_layer_reset_LTRM), [TO_BASE_LAYER_MIDI] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_MIDI, dance_layer_reset_MIDI)};
+qk_tap_dance_action_t tap_dance_actions[] = {[TO_BASE_LAYER_BASE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_BASE, dance_layer_reset_BASE), [TO_BASE_LAYER_FUNC] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_FUNC, dance_layer_reset_FUNC), [TO_BASE_LAYER_LTRM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_LTRM, dance_layer_reset_LTRM)/*, [TO_BASE_LAYER_MIDI] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_layer_MIDI, dance_layer_reset_MIDI)*/};
 
 void matrix_init_user(void) {
 #ifdef POT_ENABLE

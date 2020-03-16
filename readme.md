@@ -5,6 +5,7 @@
 * [How to use](#how-to-use)
     * [Using rotary encoder with lightroom](#using-rotary-encoder-with-lightroom)
     * [Using slider with FL Studio](#using-slider-with-FL-Studio)
+    * [Layer switching hack](#layer-switching-hack)
 * [Build setup](#build-setup)
     * [Hardware](#hardware)
         * [PCB](#pcb)
@@ -83,6 +84,10 @@ Firstly, let's configure our keyboard as a midi input device in FL studio, go to
 
 If you want to use slider to control the master volume, right click on the master volume icon, and select 'link to controller', move the slider on your keyboard then they should be automatically bound together.
 
+## Layer switching hack
+
+Normally you can tap 'Fn' once to switch to next layer, with this keyboard you are allowed to tap 'Fn' twice quickly to instantly switch back to base layer, whatever layer you're staying, what's more, if you tap 'Fn' twice quickly in base layer, it will bring you back to the layer you previously stayed, it's helpful when you're concentrating on your work.
+
 [Back to top](#pheromone)
 
 # Build setup
@@ -116,7 +121,6 @@ The gerber files is ready to be manufactured, send it to any manufacturer you tr
 |USB micro |USB_Micro-B_Molex|1|
 |key switch ||63|
 
-
 The slide potentiometer I'm using here is bought from [taobao](https://detail.tmall.com/item.htm?id=605360822904&spm=a1z09.2.0.0.62ba2e8dWNJi1c&_u=110cp31q45a9), in theory any other B10K slide potentiometer should also work fine, just remember to modify the footprint in KiCad if your slide potentiometer come with a different size.
 <!-- ![Photo](https://i.imgur.com/kBHOk4f.jpg) -->
 <img src="https://i.imgur.com/kBHOk4f.jpg" width="300">
@@ -131,7 +135,6 @@ The handle length of rotary encoder would better be 15mm, so that it's easier to
 ![Photo](https://i.imgur.com/lK41vY3.jpg)
 ![Photo](https://i.imgur.com/Gm71eud.jpg)
 
-
 [Back to top](#pheromone)
 
 ## Software
@@ -139,9 +142,7 @@ The handle length of rotary encoder would better be 15mm, so that it's easier to
 ### Bootloader
 The firmware uses qmk-dfu as its bootloader, once you've got MCU and other parts soldered, you need to set bootloader for your MCU, normally you will want a USBISP as ISP flasher, or a pro micro wired to ISP socket on your keyboard.
 
-
 Here I'm using a teensy 2.0 flashed with [this](https://github.com/qmk/qmk_firmware/blob/master/util/teensy_2.0_ISP_B0.hex) firmware, to learn how to turn your teensy or pro micro into a ISP flasher and how to wire it to your keyboard, follow the [guide](https://beta.docs.qmk.fm/for-makers-and-modders/isp_flashing_guide).
-
 
 Make sure you wired correctly, open up terminal and type:
 
@@ -192,8 +193,6 @@ You're able to detect the ouput value from using midi software, I'm using MIDI M
 
 <!-- ![PHOTO](https://i.imgur.com/sUAwIdn.png) -->
 <img src="https://i.imgur.com/sUAwIdn.png" width="500">
-
-
 
 **The feature is still being tested.**
 
