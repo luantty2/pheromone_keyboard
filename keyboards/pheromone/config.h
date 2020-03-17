@@ -48,7 +48,7 @@
 #define DISABLE_LEADER
 
 /*enable midi slider*/
-#define POT_ENABLE
+// #define POT_ENABLE
 
 
 

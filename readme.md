@@ -112,7 +112,7 @@ The gerber files is ready to be manufactured, send it to any manufacturer you tr
 |10K resistor |0805|2|
 |22ohm resistor|0805|2|
 |16Mhz Crystal |3225|1|
-|reset switch |6mm*2.5mm|1|
+|reset button switch |6mm*2.5mm|1|
 |rotary encoder|EC11|1|
 |Kailh hot swap socket||63|
 |OLED screen|0.91' SSD1306|1|
@@ -125,7 +125,7 @@ The slide potentiometer I'm using here is bought from [taobao](https://detail.tm
 <!-- ![Photo](https://i.imgur.com/kBHOk4f.jpg) -->
 <img src="https://i.imgur.com/kBHOk4f.jpg" width="300">
 
-The handle length of rotary encoder would better be 15mm, so that it's easier to find a suitable cap for it, otherwise it would be too high or to low.
+The proper handle length of rotary encoder would be 15mm, so that it's easier to find a suitable cap for it, otherwise it can be too high or to low.
 
 <!-- ![Photo](https://i.imgur.com/AZAtBvj.jpg) -->
 <img src="https://i.imgur.com/AZAtBvj.jpg" width="300">
@@ -216,7 +216,7 @@ When holding left shift and number 2, it gives a '@' as usual.
 ![Photo](https://i.imgur.com/8Hc7hZv.jpg)
 The plate file is ready to be manufactured, either carbon fiber or brass is fine.
 
-There are 6 screw holes on plate and pcb, you can insert M2*10mm screws to enhance the tightness between switch and pcb, yet they are optional.
+There are 6 screw holes on plate and pcb, allow you insert M2*10mm screws to enhance the tightness between switch and pcb, yet they are optional.
 
 ## Case
 The case file is for 3D printing, either PLA or resin should be fine. 
@@ -225,7 +225,7 @@ After sanding and painting it actually gives you great surface. If you find some
 
 All screws for mounting holes are M2.5 size, but you can modify them up to the actual situation.
 
-If you choose PLA then it's easy to heat insert threads, but if you choose to use resin, like me, it's a little tricky, you may want to glue your inset nuts to  every hole, and sanding nuts when necessary.
+If you choose PLA then it's easy to heat insert threads, but if you choose to use resin, like me, then it's a little tricky, you may want to glue your inset nuts to  every hole, and sanding nuts when necessary.
 
 The buttom of acrylic is made of acrylic cut by laser.
 
