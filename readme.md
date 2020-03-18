@@ -198,17 +198,12 @@ You're able to detect the ouput value from using midi software, I'm using MIDI M
 
 ### Customizing email address marco
 
-When holding **right shift** and hit number '2', it will print an email address on screen, you can modify the address by editing *config.h*:
+When holding **right shift** and hit number '2', it will print an email address on screen, you can modify the address by editing line 559 in *keymap.c*:
 
 ```
-#define EMAIL_ADDRESS "your_email_address@xxx.com"
+SEND_STRING("your_email_address@xxx.com");
 ```
 When holding left shift and number 2, it gives a '@' as usual.
-
-If you don't want this feature, remove the code below in *config.h*:
-```
-#define EMAIL_ENABLE
-```
 
 [Back to top](#pheromone)
 
