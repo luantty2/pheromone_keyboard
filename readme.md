@@ -69,7 +69,7 @@ The keycode of encoder in func layer has been updated to KC_BRIGHTNESS_UP and KC
 
 To enable midi input for lightroom, you first need to make sure [MIDI2LR](https://rsjaffe.github.io/MIDI2LR/) plugin installed on your computer, plug in keyboard and restart lightroom, you should see a configure page, in which you could combine the output of rotary encoder with lightroom command.
 
-Before you start you should switch the keyboard layer to 'LTRM' by pressing "Fn" key twice, aware that the current layer you're staying is displayed on oled screen. 
+Before you start you should switch the keyboard layer to 'LTRM' by pressing "Fn" key twice, note that the current layer you're staying is displayed on oled screen. 
 
 The rotary encoder outputs values on CC1 by default, now if you rotate the encoder, the MIDI2LR page should appear a new row written MIDI command of 'CC1', if it doesn't, click 'Rescan MIDI devices' button below.
 
@@ -77,7 +77,7 @@ Now that our midi command isn't assigned to a lightroom command, to do that we s
 
 __It's important to right click on your command row, and select 'Binary offset' in the pop up window, and click 'apply to all'.__
 
-I mentioned that the rotary encoder can handle up to 26 different sliders in lightroom, to do that, click any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
+The rotary encoder is able to handle up to 26 different sliders in lightroom, to do that, click any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
 
 <!-- ![PHOTO](https://i.imgur.com/EVTehiw.png) -->
 <img src="https://i.imgur.com/EVTehiw.png" width="500">
@@ -86,7 +86,7 @@ I mentioned that the rotary encoder can handle up to 26 different sliders in lig
 
 Firstly, let's configure our keyboard as a midi input device in FL studio, go to options -> MIDI settings, click 'enable' button if 'pheromone' is shown here.
 
-If you want to use slider to control the master volume, right click on the master volume icon, and select 'link to controller', move the slider on your keyboard then they should be automatically bound together.
+If you want to use slider to control the master volume in Fl Studio, right click on the master volume icon, and select 'link to controller', move the slider on your keyboard then they should be automatically bound together.
 
 ## Layer switching hack
 
