@@ -51,7 +51,10 @@ Make example for this keyboard (after setting up your build environment):
 ## Function layer
 
 ![Photo](https://i.imgur.com/68KGHlW.png)
-*The encoder in func layer has the abilitity to contol screen brightness, however it's only compatible with macos currently.*
+~~The encoder in func layer has the abilitity to contol screen brightness, however it's only compatible with macos currently.~~
+
+The keycode of encoder in func layer has been updated to KC_BRIGHTNESS_UP and KC_BRIGHTNESS_DOWN, now it works on both Windows and MacOS.
+
 
 ## Lightroom layer
 
