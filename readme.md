@@ -216,7 +216,7 @@ Find the MOD_SEQUENCE_CAW marco in *config.h*, where 'C' stands for 'Ctrl', 'A' 
 #define MOD_SEQUENCE_ACW
 */
 ```
-By default it's set to MOD_SEQUENCE_CAW, which means it's an order for mac users, if you gonna change the order to 'Ctrl, Alt, Win', then comment '#define MOD_SEQUENCE_CAW' and uncomment '#define MOD_SEQUENCE_CWA' and recompile.
+By default it's set to MOD_SEQUENCE_CAW, which means it's an order for mac users, if you gonna change the order to 'Ctrl, Win, Alt', then comment '#define MOD_SEQUENCE_CAW' and uncomment '#define MOD_SEQUENCE_CWA' and recompile.
 
 ### Customizing email address marco
 
@@ -226,6 +226,12 @@ When holding **right shift** and hit number '2', it will print an email address 
 SEND_STRING("your_email_address@xxx.com");
 ```
 When holding left shift and number 2, it gives a '@' as usual.
+
+Certainly if you don't want this marco, remove
+```
+#define EMAIL_ENABLE
+```
+in *config.h*.
 
 [Back to top](#pheromone)
 
