@@ -90,7 +90,7 @@ If you want to use slider to control the master volume, right click on the maste
 
 ## Layer switching hack
 
-Normally you can tap 'Fn' once to switch to next layer, with this keyboard you are allowed to tap 'Fn' twice quickly to instantly switch back to base layer, whatever layer you're staying, what's more, if you tap 'Fn' twice quickly in base layer, it will bring you back to the layer you previously stayed, it's helpful when you're concentrating on your work.
+Normally you can tap 'Fn' once to switch to next layer, with this keyboard you are allowed to tap 'Fn' twice quickly to instantly switch back to base layer, regardless of what layer you're staying. What's more, if you tap 'Fn' twice quickly in base layer, it will bring you back to the layer you previously stayed, it's helpful when you're concentrating on your work since layer switching doesn't bother you.
 
 [Back to top](#pheromone)
 
@@ -116,7 +116,7 @@ The gerber files is ready to be manufactured, send it to any manufacturer you tr
 |10K resistor |0805|2|
 |22ohm resistor|0805|2|
 |16Mhz Crystal |3225|1|
-|reset button switch |6mm*2.5mm|1|
+|button switch for reset |6mm*2.5mm|1|
 |rotary encoder|EC11|1|
 |Kailh hot swap socket||63|
 |OLED screen|0.91' SSD1306|1|
