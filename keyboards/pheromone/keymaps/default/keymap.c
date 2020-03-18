@@ -550,13 +550,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
             }
             break;
+#ifdef EMAIL_ENABLE
         case KC_2:
             if (record->event.pressed) {
                 if (get_mods() & MOD_BIT(KC_LSHIFT)) {
                     register_code16(LSFT(KC_2));
                 } else if (get_mods() & MOD_BIT(KC_RSHIFT)) {
                     del_mods(MOD_BIT(KC_RSHIFT));
-                    SEND_STRING("luanty@163.com");
+                    SEND_STRING(EMAIL_ADDRESS);
                 } else {
                     register_code(KC_2);
                 }
@@ -569,6 +570,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
             }
             break;
+#endif
         default:
             break;
     }
@@ -633,24 +635,24 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         switch (biton32(layer_state)) {
             case _BASE:
                 if (clockwise) {
-                    tap_code(KC_VOLD);
-                } else {
                     tap_code(KC_VOLU);
+                } else {
+                    tap_code(KC_VOLD);
                 }
                 break;
             case _FUNC:
                 if (clockwise) {
-                    tap_code(KC_SLCK);
+                    tap_code(KC_BRIGHTNESS_UP);
 
                 } else {
-                    tap_code(KC_PAUS);
+                    tap_code(KC_BRIGHTNESS_DOWN);
                 }
                 break;
             case _LTRM:
                 if (clockwise) {
-                    midi_send_cc(&midi_device, 0, current_MIDI_ccNumber, 63);
-                } else {
                     midi_send_cc(&midi_device, 0, current_MIDI_ccNumber, 65);
+                } else {
+                    midi_send_cc(&midi_device, 0, current_MIDI_ccNumber, 63);
                 }
                 break;
             // case _MIDI:
