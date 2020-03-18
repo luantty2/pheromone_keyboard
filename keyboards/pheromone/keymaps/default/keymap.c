@@ -35,7 +35,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      //---
                      KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT, KC_UP, TD(TO_BASE_LAYER_BASE),/*TO(_FUNC),*/
                      //---
-                     KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, KC_LEFT, KC_DOWN, KC_RGHT),
+                     #ifdef MOD_SEQUENCE_CAW
+                     KC_LCTL, KC_LALT, KC_LGUI
+                     #elifdef MOD_SEQUENCE_CWA
+                     KC_LCTL, KC_LGUI, KC_LALT
+                     #elifdef MOD_SEQUENCE_WAC
+                     KC_LGUI, KC_LALT, KC_LCTL
+                     #elifdef MOD_SEQUENCE_WCA
+                     KC_LGUI, KC_LCTL, KC_LALT
+                     #elifdef MOD_SEQUENCE_AWC
+                     KC_LALT, KC_LGUI, KC_LCTL
+                     #elifdef MOD_SEQUENCE_ACW
+                     KC_LALT, KC_LCTL, KC_LGUI
+                     #else
+                     KC_LCTL, KC_LALT, KC_LGUI
+                     #endif
+                     , KC_SPC, KC_LEFT, KC_DOWN, KC_RGHT),
 
     [_FUNC] = LAYOUT(KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
                      //-ESC_____1______2______3______4______5______6______7______8______9______10______ _ _______=________`_______bksp

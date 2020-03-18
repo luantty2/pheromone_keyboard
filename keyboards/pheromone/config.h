@@ -50,5 +50,14 @@
 	#define EMAIL_ADDRESS "luanty@163.com"
 #endif
 
+/*sequence for ctrl, win and alt*/
+#define MOD_SEQUENCE_CAW /*normally for macos users*/
+// #define MOD_SEQUENCE_CWA /*normally for windows users*/
+
+/*other sequences*/
+//#define MOD_SEQUENCE_WAC
+//#define MOD_SEQUENCE_WCA
+//#define MOD_SEQUENCE_AWC
+//#define MOD_SEQUENCE_ACW
 
 

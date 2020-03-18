@@ -15,6 +15,7 @@
         * [Flashing firmware](#flashing-firmware)
         * [Customizing oled screen](#customizing-oled-screen)
         * [Enable midi slider](#enable-midi-slider)
+        * [Sorting CTRL, WIN and ALT](#sorting-ctrl,-win-and-alt)
         * [Customizing email address marco](#customizing-email-address-marco)
 * [Assembly](#assembly)
     * [Plate](#plate)
@@ -198,6 +199,24 @@ You're able to detect the ouput value from using midi software, I'm using MIDI M
 <img src="https://i.imgur.com/sUAwIdn.png" width="500">
 
 **The feature is still being tested.**
+### Sorting CTRL, WIN and ALT
+You may want to change the order of "Ctrl, Alt and Win", pheromone gives you an easy way to do that. 
+
+Find the MOD_SEQUENCE_CAW marco in *config.h*, where 'C' stands for 'Ctrl', 'A' stands for 'Alt', and 'W' stands for 'Win'.
+```
+#define MOD_SEQUENCE_CAW /*normally for macos users*/
+
+/* 
+#define MOD_SEQUENCE_CWA /*normally for windows users*/
+
+/*other sequences*/
+#define MOD_SEQUENCE_WAC
+#define MOD_SEQUENCE_WCA
+#define MOD_SEQUENCE_AWC
+#define MOD_SEQUENCE_ACW
+*/
+```
+By default it's set to MOD_SEQUENCE_CAW, which means it's an order for mac users, if you gonna change the order to 'Ctrl, Alt, Win', then comment '#define MOD_SEQUENCE_CAW' and uncomment '#define MOD_SEQUENCE_CWA' and recompile.
 
 ### Customizing email address marco
 
