@@ -37,15 +37,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      //---
                      #ifdef MOD_SEQUENCE_CAW
                      KC_LCTL, KC_LALT, KC_LGUI
-                     #elifdef MOD_SEQUENCE_CWA
+                     #elif defined(MOD_SEQUENCE_CWA)
                      KC_LCTL, KC_LGUI, KC_LALT
-                     #elifdef MOD_SEQUENCE_WAC
+                     #elif defined(MOD_SEQUENCE_WAC)
                      KC_LGUI, KC_LALT, KC_LCTL
-                     #elifdef MOD_SEQUENCE_WCA
+                     #elif defined(MOD_SEQUENCE_WCA)
                      KC_LGUI, KC_LCTL, KC_LALT
-                     #elifdef MOD_SEQUENCE_AWC
+                     #elif defined(MOD_SEQUENCE_AWC) 
                      KC_LALT, KC_LGUI, KC_LCTL
-                     #elifdef MOD_SEQUENCE_ACW
+                     #elif defined(MOD_SEQUENCE_ACW)
                      KC_LALT, KC_LCTL, KC_LGUI
                      #else
                      KC_LCTL, KC_LALT, KC_LGUI
