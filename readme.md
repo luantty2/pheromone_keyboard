@@ -25,9 +25,13 @@
 
 # Overview
 
-Pheromone is a 63-key keyboard supports slide potentiometer, rotary encoder and oled screen. The slide potentiometer outputs a midi signal which can be recognized by any software reads midi input, however the stability is still being tested. The rotary encoder also outputs midi signal when the keyboard is switched to 'Lightroom' dedicated layer, once you pressed an alpha key the knob will output a midi cc signal with different parameter, which allows you use a knob to adjust up to 26 sliders in lightroom, furthermore, most importantly, the value will not jump or jitter, oppositely it moves relatively and smoothly. The oled screen will show you the last alpha key you pressed, the caps lock state and the layer you're currently staying. The firmware is fully QMK, see [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
+Pheromone is a 63-key keyboard supports slide potentiometer, rotary encoder and oled screen. The slide potentiometer outputs a midi signal which can be recognized by any software reads midi input, however the stability is still being tested. The rotary encoder also outputs midi signal when the keyboard is switched to 'Lightroom' dedicated layer, once you pressed an alpha key the knob will output a midi cc signal with different parameter, which allows you use a knob to adjust up to 26 sliders in lightroom(with 'photographer' keymap, it's even 78), most importantly, the value will not jump or jitter, oppositely it moves relatively and smoothly. The oled screen will show you the last alpha key you pressed, the caps lock state and the layer you're currently staying. 
 
-![PHOTO](https://i.imgur.com/w7OICen.jpg)
+The firmware is fully QMK, see [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
+
+![PHOTO](https://i.imgur.com/UIuSWyg.jpg)
+
+[More photos](https://imgur.com/a/TCALTwa)
 
  Keyboard Maintainer: [luantty2](https://github.com/luantty2)
 
@@ -77,7 +81,19 @@ Now that our midi command isn't assigned to a lightroom command, to do that we s
 
 __It's important to right click on your command row, and select 'Binary offset' in the pop up window, and click 'apply to all'.__
 
-The rotary encoder is able to handle up to 26 different sliders in lightroom, to do that, click any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
+The rotary encoder is able to handle up to 26 different sliders with default keymap, and 78 different sliders with photographer keymap. 
+
+#### Default keymap
+
+With default keymap, simply tap any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
+
+#### Photographer keymap
+
+With photographer keymap, besides tap alpha key once, you're also allowed to tap it twice or 3 times, it will give different cc numbers according to your tapping times, with which you can handle up to 78 cc numbers. The assignment is the same as default keymap. With this keymap you have
+
+#### Writer keymap
+
+Writer keymap does not support using rotary encoder to output midi signals.
 
 <!-- ![PHOTO](https://i.imgur.com/EVTehiw.png) -->
 <img src="https://i.imgur.com/EVTehiw.png" width="500">
@@ -247,6 +263,8 @@ The plate file is ready to be manufactured, either carbon fiber or brass is fine
 There are 6 screw holes on plate and pcb, allow you insert M2*10mm screws to enhance the tightness between switch and pcb, yet they are optional.
 
 ## Case
+
+![Photo](https://i.imgur.com/TLQ6KJO.jpg)
 The case file is for 3D printing, either PLA or resin should be fine. 
 
 After sanding and painting it actually gives you great surface. If you find some uneven gaps  on surface, woodfiller and primer will help you smooth them.
@@ -258,7 +276,10 @@ If you choose PLA then it's easy to heat insert threads, but if you choose to us
 The buttom of acrylic is made of acrylic cut by laser.
 
 ## Slider cap
-The cap of slider is also 3D printed.
+
+The cap of slider is also 3D printed. The post-processing is the same as case.
+
+![Photo](https://i.imgur.com/uE1CKxa.jpg)
 
 [Back to top](#pheromone)
 
