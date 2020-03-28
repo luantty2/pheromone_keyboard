@@ -177,6 +177,12 @@ copy the result, run the command below:
 ```
 avrdude -c avrisp -p m32u4 -P /dev/tty.usbmodem123456 -U flash:w:"pheromone_default_bootloader.hex":a -U lfuse:w:0x5E:m -U hfuse:w:0xD9:m -U efuse:w:0xC3:m -U lock:w:0x3F:m
 ```
+#### For DFU bootloader
+If your MCU has preinstalled a default bootloader, there's no need to install qmk-dfu, add a line in *rules.mk* 
+```
+BOOTLOADER = atmel-dfu
+```
+and recompile.
 
 ### Flashing firmware
 
@@ -280,7 +286,7 @@ The mounting holes are compatible with insert threads with 3.5mm outter diameter
 
 If you choose PLA then it's easy to heat insert threads, but if you choose to use resin, like me, then it's a little tricky, you may want to glue your inset nuts to  every hole, and sanding nuts when necessary.
 
-The buttom of acrylic is made of acrylic cut by laser with 2mm thickness.
+The buttom plate is made of acrylic cut by laser with 2mm thickness.
 
 ## Slider cap
 
