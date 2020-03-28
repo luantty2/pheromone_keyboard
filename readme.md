@@ -25,11 +25,11 @@
 
 # Overview
 
-Pheromone is a 63-key keyboard supports slide potentiometer, rotary encoder and oled screen. The slide potentiometer outputs a midi signal which can be recognized by any software reads midi input, however the stability is still being tested. The rotary encoder also outputs midi signal when the keyboard is switched to 'Lightroom' dedicated layer, once you pressed an alpha key the knob will output a midi cc signal with different parameter, which allows you use a knob to adjust up to 26 sliders in lightroom(with 'photographer' keymap, it's even 78), most importantly, the value will not jump or jitter, oppositely it moves relatively and smoothly. The oled screen will show you the last alpha key you pressed, the caps lock state and the layer you're currently staying. 
+Pheromone is a 63-key keyboard supports slide potentiometer, rotary encoder and oled screen. The slide potentiometer outputs a midi signal which can be recognized by any software reads midi input, however the stability is still being tested. The rotary encoder also outputs midi signal when the keyboard is switched to 'Lightroom' dedicated layer, once you pressed an letter key the knob will output a midi cc signal with different parameter, which allows you use a knob to adjust up to 26 sliders in lightroom(with 'photographer' keymap, it's even 78), most importantly, the value will not jump or jitter, oppositely it moves relatively and smoothly. The oled screen will show you the last letter key you pressed, the caps lock state and the layer you're currently staying. 
 
 The firmware is fully QMK, see [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
 
-![PHOTO](https://i.imgur.com/UIuSWyg.jpg)
+![PHOTO](https://i.imgur.com/yKMB3aD.jpg)
 
 [More photos](https://imgur.com/a/TCALTwa)
 
@@ -85,11 +85,11 @@ The rotary encoder is able to handle up to 26 different sliders with default key
 
 #### Default keymap
 
-With default keymap, simply tap any alpha key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
+With default keymap, simply tap any letter key then rotate encoder, you should see a new row appear, assign it to any command you want, for example: press 'E' and assign command to 'Basic Tone -> Exposure'.
 
 #### Photographer keymap
 
-With photographer keymap, besides tap alpha key once, you're also allowed to tap it twice or 3 times, it will give different cc numbers according to your tapping times, with which you can handle up to 78 cc numbers. The assignment is the same as default keymap. With this keymap you have
+With photographer keymap, besides tap letter key once, you're also allowed to tap it twice or 3 times, it will give different cc numbers according to your tapping times, with which you can handle up to 78 cc numbers. The assignment is the same as default keymap. With this keymap you have
 
 #### Writer keymap
 
@@ -194,9 +194,9 @@ Once you've got qmk working, simply hold down esc when connecting keyboard to co
 
 The oled screen always showing an image, in addition, it also shows you multiple useful information:
 * the capslock state
-* the last alpha key you pressed
+* the last letter key you pressed
 * the layer you're currently staying
-* the midi cc value of an alpha key if you're staying in 'LTRM' layer.
+* the midi cc value of an letter key if you're staying in 'LTRM' layer.
 
 the font file is located in *keyboards/pheromone/keymaps/default/glcdfont.c*
 
@@ -236,11 +236,17 @@ By default it's set to MOD_SEQUENCE_CAW, which means it's an order for mac users
 
 ### Customizing email address marco
 
-When holding **right shift** and hit number '2', it will print an email address on screen, you can modify the address by editing line 559 in *keymap.c*:
+When holding **right shift** and hit number '2', it will print an email address on screen,~~you can modify the address by editing line 559 in *keymap.c*:~~
 
+~~SEND_STRING("your_email_address@xxx.com");~~
+
+replcace your email address in *config.h*:
 ```
-SEND_STRING("your_email_address@xxx.com");
+#ifdef EMAIL_ENABLE
+	#define EMAIL_ADDRESS "your_email_address@xxx.com"
+#endif
 ```
+
 When holding left shift and number 2, it gives a '@' as usual.
 
 Certainly if you don't want this marco, remove
@@ -279,7 +285,7 @@ The buttom of acrylic is made of acrylic cut by laser.
 
 The cap of slider is also 3D printed. The post-processing is the same as case.
 
-![Photo](https://i.imgur.com/uE1CKxa.jpg)
+![Photo](https://i.imgur.com/xKxWug2.jpg)
 
 [Back to top](#pheromone)
 
