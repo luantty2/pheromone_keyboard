@@ -273,13 +273,14 @@ There are 6 screw holes on plate and pcb, allow you insert M2*10mm screws to enh
 ![Photo](https://i.imgur.com/TLQ6KJO.jpg)
 The case file is for 3D printing, either PLA or resin should be fine. 
 
-After sanding and painting it actually gives you great surface. If you find some uneven gaps  on surface, woodfiller and primer will help you smooth them.
+After sanding and painting it actually gives you great surface. If you find some uneven gaps on surface, woodfiller and primer will help you smooth them.
 
-All screws for mounting holes are M2.5 size, but you can modify them up to the actual situation.
+<!-- All screws for mounting holes are M2.5 size, but you can modify them up to the actual situation. -->
+The mounting holes are compatible with insert threads with 3.5mm outter diameter, the size of threads could be M2 or M2.5, the depth would better be 3mm.
 
 If you choose PLA then it's easy to heat insert threads, but if you choose to use resin, like me, then it's a little tricky, you may want to glue your inset nuts to  every hole, and sanding nuts when necessary.
 
-The buttom of acrylic is made of acrylic cut by laser.
+The buttom of acrylic is made of acrylic cut by laser with 2mm thickness.
 
 ## Slider cap
 
