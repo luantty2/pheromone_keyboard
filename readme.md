@@ -141,7 +141,7 @@ The gerber files is ready to be manufactured, send it to any manufacturer you tr
 |USB micro |USB_Micro-B_Molex|1|
 |key switch ||63|
 
-The slide potentiometer I'm using here is bought from [taobao](https://detail.tmall.com/item.htm?id=605360822904&spm=a1z09.2.0.0.62ba2e8dWNJi1c&_u=110cp31q45a9), in theory any other B10K slide potentiometer should also work fine, just remember to modify the footprint in KiCad if your slide potentiometer come with a different size.
+The slide potentiometer I'm using here is bought from [taobao](https://detail.tmall.com/item.htm?id=605360822904&spm=a1z09.2.0.0.62ba2e8dWNJi1c&_u=110cp31q45a9), The same one could be found [here](https://www.aliexpress.com/item/32967375420.html?spm=a2g0o.productlist.0.0.f9286d5aOqbvSl&algo_pvid=f2208a9b-aa38-42ff-b372-a72e9cf80c1a&algo_expid=f2208a9b-aa38-42ff-b372-a72e9cf80c1a-1&btsid=0ab50f0815852140246381305e15e4&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_), in theory any other B10K slide potentiometer should also work fine, just remember to modify the footprint in KiCad if your slide potentiometer comes with a different size.
 <!-- ![Photo](https://i.imgur.com/kBHOk4f.jpg) -->
 <img src="https://i.imgur.com/kBHOk4f.jpg" width="300">
 
