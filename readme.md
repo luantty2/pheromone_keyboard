@@ -118,7 +118,7 @@ Normally you can tap 'Fn' once to switch to next layer, with this keyboard you a
 
 The gerber files is ready to be manufactured, send it to any manufacturer you trust to be good. 
 
-![PHOTO](https://i.imgur.com/Z5nTv9h.jpg)
+![PHOTO](https://i.imgur.com/CtAeSPQ.jpg)
 
 ### BOM
 
