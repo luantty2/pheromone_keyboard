@@ -73,6 +73,8 @@ The keycode of encoder in func layer has been updated to KC_BRIGHTNESS_UP and KC
 
 To enable midi input for lightroom, you first need to make sure [MIDI2LR](https://rsjaffe.github.io/MIDI2LR/) plugin installed on your computer, plug in keyboard and restart lightroom, you should see a configure page, in which you could combine the output of rotary encoder with lightroom command.
 
+A short video explanation: [link](https://youtu.be/1BtyvG6ujGs)
+
 Before you start you should switch the keyboard layer to 'LTRM' by pressing "Fn" key twice, note that the current layer you're staying is displayed on oled screen. 
 
 The rotary encoder outputs values on CC1 by default, now if you rotate the encoder, the MIDI2LR page should appear a new row written MIDI command of 'CC1', if it doesn't, click 'Rescan MIDI devices' button below.
