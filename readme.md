@@ -29,6 +29,8 @@ Pheromone is a 63-key keyboard supports slide potentiometer, rotary encoder and 
 
 The firmware is fully QMK, see [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) then the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information.
 
+Firmware built with QMK version "0.7.101-10-g3eb82e-dirty".
+
 ![PHOTO](https://i.imgur.com/yKMB3aD.jpg)
 
 [More photos](https://imgur.com/a/TCALTwa)
