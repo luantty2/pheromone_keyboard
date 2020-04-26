@@ -272,7 +272,8 @@ in *config.h*.
 ![Photo](https://i.imgur.com/y5gPgMj.png)
 
 ## Plate
-
+![Photo](https://i.imgur.com/DCG8fmZ.jpg)
+![Photo](https://i.imgur.com/GfBvTnS.jpg)
 ![Photo](https://i.imgur.com/8Hc7hZv.jpg)
 The plate file is ready to be manufactured, either carbon fiber or brass is fine.
 
