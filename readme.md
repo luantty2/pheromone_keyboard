@@ -1,6 +1,7 @@
 # Pheromone
 
 * [Overview](#overview)
+    * [Testimonials](#testimonials)
 * [Keymap](#keymap)
 * [How to use](#how-to-use)
     * [Using rotary encoder with lightroom](#using-rotary-encoder-with-lightroom)
@@ -33,6 +34,8 @@ Firmware built with QMK version "0.7.101-10-g3eb82e-dirty".
 
 ![PHOTO](https://i.imgur.com/yKMB3aD.jpg)
 
+![Photo](https://i.imgur.com/xKxWug2.jpg)
+
 [More photos](https://imgur.com/a/TCALTwa)
 
  Keyboard Maintainer: [luantty2](https://github.com/luantty2)
@@ -42,6 +45,14 @@ Make example for this keyboard (after setting up your build environment):
 ```
  make pheromone:default
 ```
+
+## Testimonials
+
+Cherry's build:
+
+<img src="https://i.imgur.com/QYKNaPv.jpg" width="500">
+
+<img src="https://i.imgur.com/MppbkgL.jpg" width="500">
 
 [Back to top](#pheromone)
 
