@@ -3,6 +3,7 @@
 * [Overview](#overview)
     * [Testimonials](#testimonials)
 * [Keymap](#keymap)
+    * [Via](#via)
 * [How to use](#how-to-use)
     * [Using rotary encoder with lightroom](#using-rotary-encoder-with-lightroom)
     * [Using slider with FL Studio](#using-slider-with-FL-Studio)
@@ -78,6 +79,12 @@ The keycode of encoder in func layer has been updated to KC_BRIGHTNESS_UP and KC
 
 ![Photo](https://i.imgur.com/Kzzc2MX.png)
 
+## Via
+
+An easy tool for setting custom keycodes. [Download](https://caniusevia.com/) the Via configurator first, open and click via->import keyboards/pheromone/keymaps/via/info.json, via will detect the keyboard automatically.
+
+![Photo](https://i.imgur.com/LJvDmKo.png)
+
 [Back to top](#pheromone)
 
 # How to use
@@ -104,7 +111,7 @@ With default keymap, simply tap any letter key then rotate encoder, you should s
 
 #### Photographer keymap
 
-With photographer keymap, besides tap letter key once, you're also allowed to tap it twice or 3 times, it will give different cc numbers according to your tapping times, with which you can handle up to 78 cc numbers. The assignment is the same as default keymap. With this keymap you have
+With photographer keymap, besides tap letter key once, you're also allowed to tap it twice or 3 times, it will give different cc numbers according to your tapping times, with which you can handle up to 78 cc numbers. The assignment is the same as default keymap.
 
 #### Writer keymap
 
