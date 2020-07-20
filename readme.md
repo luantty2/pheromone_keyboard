@@ -83,6 +83,8 @@ The keycode of encoder in func layer has been updated to KC_BRIGHTNESS_UP and KC
 
 An easy tool for setting custom keycodes. [Download](https://caniusevia.com/) the Via configurator first, open and click via->import keyboards/pheromone/keymaps/via/info.json, via will detect the keyboard automatically.
 
+you need to flash pheromone_via.hex from precompiled firmware folder before playing with via.
+
 ![Photo](https://i.imgur.com/LJvDmKo.png)
 
 [Back to top](#pheromone)
