@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name pheromone-rescue)(type Legacy)(uri ${KIPRJMOD}/pheromone-rescue.lib)(options "")(descr ""))
+)

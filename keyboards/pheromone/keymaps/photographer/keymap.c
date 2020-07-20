@@ -630,6 +630,28 @@ void matrix_scan_user(void) {
     }
 #endif
 }
+/*test
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    	case KC_0:
+            if (record->event.pressed) {
+                if (get_mods() & MOD_BIT(KC_LCTL)) {
+                    del_mods(MOD_BIT(KC_LCTL));
+                    //SEND_STRING("hi");
+                } else {
+                    register_code(KC_0);
+                }
+                if (get_mods() & MOD_BIT(KC_LCTL)) {
+                    unregister_code16(LCTL(KC_0));
+                } else {
+                    unregister_code(KC_0);
+                }
+                return false;
+            }
+        break;
+    }
+}
+*/
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
