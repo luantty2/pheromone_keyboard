@@ -24,6 +24,7 @@
     * [Case](#case)
     * [Slider cap](#slider-cap)
 * [Bugs and improvements](#bugs-and-improvements)
+* [To do](#to-do)
 
 # Overview
 
@@ -324,3 +325,15 @@ The cap of slider is also 3D printed. The post-processing is the same as case.
 # Bugs and improvements
 
 [Back to top](#pheromone)
+
+# To do
+
+[Back to top](#pheromone)
+
+USB improvments: USB-C connector, ESD protection, etc.
+
+MCU: considering switching to STM32F303CCT6.
+
+RGB matrix using is31fl3733.
+
+
