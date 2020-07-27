@@ -2,6 +2,7 @@
 
 * [Overview](#overview)
     * [Testimonials](#testimonials)
+    * [Copyright](#copyright)
 * [Keymap](#keymap)
     * [Via](#via)
 * [How to use](#how-to-use)
@@ -57,6 +58,15 @@ Cherry's build:
 <img src="https://i.imgur.com/MppbkgL.jpg" width="500">
 
 [Back to top](#pheromone)
+
+# Copyright
+
+This project has no license currently, please understand what [no license](https://choosealicense.com/no-permission/) is.
+
+<!-- ![Photo](https://i.imgur.com/jzS4EEl.jpg) -->
+<img src="https://i.imgur.com/jzS4EEl.jpg" width="200">
+
+Someone started GB without permission, please don't buy from these sellers.
 
 # Keymap
 
