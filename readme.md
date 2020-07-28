@@ -49,7 +49,7 @@ Make example for this keyboard (after setting up your build environment):
  make pheromone:default
 ```
 
-## Testimonials
+<!-- ## Testimonials
 
 Cherry's build:
 
@@ -57,7 +57,7 @@ Cherry's build:
 
 <img src="https://i.imgur.com/MppbkgL.jpg" width="500">
 
-[Back to top](#pheromone)
+[Back to top](#pheromone) -->
 
 # Copyright
 
