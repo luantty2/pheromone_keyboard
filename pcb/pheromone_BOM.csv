@@ -1,5 +1,5 @@
-Comment,Description,Designator,Footprint,LibRef,Pins,Quantity,±àºÅ
-LOGO,Desc,"G***,",monitor,LibRef,0,1
+Comment,Description,Designator,Footprint,LibRef,Pins,Quantity,Â±Ã ÂºÃ…
+LOGO,Desc,"G***",,monitor,LibRef,0,1
 KiCad-Logo_5mm_Copper,Desc,"REF**,",KiCad-Logo_5mm_Copper,LibRef,0,1
 WEEE-Logo_4.2x6mm_SilkScreen,Desc,"REF**,",WEEE-Logo_4.2x6mm_SilkScreen,LibRef,0,1
 22p,Desc,"C2,C1,",C_0805_2012Metric,LibRef,2,2
